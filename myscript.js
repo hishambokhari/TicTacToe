@@ -9,3 +9,18 @@ function clearBoard(){
 }
 
 restart.addEventListener('click', clearBoard);
+
+
+function changeMaker(){
+    if(this.textContent === ""){
+        this.textContent = "X";
+    }else if(this.textContent === "X"){
+        this.textContent = "O";
+    }else {
+        this.textContent = "";
+    }
+}
+
+for(i = 0; i < squares.length; i++){
+    squares[i].addEventListener('click', changeMaker);
+}
